@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Shreayash Bora — Web Developer & BCA Student. Explore my projects, research, certifications, and skills." />
+  <meta name="keywords" content="Shreayash Bora, Web Developer, BCA Student, Portfolio, Projects, Lucknow" />
+  <meta name="author" content="Shreayash Bora" />
+  <title>Shreayash Bora | Web Developer &amp; BCA Student</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- Portfolio Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+       ══════════════════════════════════════════ -->
+  <header id="navbar">
+    <nav class="nav-container">
+      <a href="#hero" class="nav-logo">SB<span class="dot">.</span></a>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+        <span></span><span></span><span></span>
+      </button>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#research">Research</a></li>
+        <li><a href="#certificates">Certificates</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- ══════════════════════════════════════════
+       HERO SECTION
+       ══════════════════════════════════════════ -->
+  <section id="hero">
+    <!-- Animated background orbs -->
+    <div class="hero-bg-orbs">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+      <div class="orb orb-3"></div>
+    </div>
+
+    <div class="hero-content">
+
+      <!-- Profile Image -->
+      <div class="hero-image-wrapper reveal">
+        <div class="hero-avatar">
+          <!--
+            ┌─────────────────────────────────────────────────┐
+            │  HOW TO ADD YOUR PROFILE PHOTO:                 │
+            │  1. Create a folder named "assets" here.        │
+            │  2. Place your photo inside and name it         │
+            │     "profile.jpg"                               │
+            │  3. The image will appear automatically.        │
+            └─────────────────────────────────────────────────┘
+          -->
+          <img
+            id="profile-img"
+            src="assets/profile.jpg"
+            alt="Shreayash Bora – Profile Photo"
+            onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';"
+          />
+          <div id="avatar-placeholder" class="avatar-placeholder">
+            <i class="fas fa-user-circle"></i>
+            <span>Upload your profile photo here</span>
+            <small>Place image as: assets/profile.jpg</small>
+          </div>
+        </div>
+        <!-- Status Badge -->
+        <div class="status-badge">
+          <span class="pulse-dot"></span>
+          Open to Work
+        </div>
+      </div>
+
+      <!-- Hero Text -->
+      <div class="hero-text reveal reveal-delay-1">
+        <p class="hero-greeting">Hi there, I'm</p>
+        <h1 class="hero-name">
+          Shreayash<br/>
+          <span class="gradient-text">Bora</span>
+        </h1>
+
+      <!-- Typed animation text -->
+        <div class="hero-typed-wrapper">
+          <span class="hero-typed" id="typed-text"></span>
+          <span class="cursor">|</span>
+        </div>
+
+  <!-- Degree -->
+  <div class="meta-item">
+    <i class="fas fa-graduation-cap"></i>
+    <span><strong>Degree:</strong> Bachelor of Computer Applications (BCA) </span>
+  </div>
+
+  <!-- College -->
+  <div class="meta-item">
+    <i class="fas fa-university"></i>
+    <span><strong>College:</strong> Shri Ramswaroop Memorial College Of Management</span>
+  </div>
+
+  <!-- CGPA -->
+  <div class="meta-item">
+    <i class="fas fa-star"></i>
+    <span><strong>CGPA:</strong> 8.236 / 10</span>
+  </div>
+
+  <!-- Location -->
+  <div class="meta-item">
+    <i class="fas fa-map-marker-alt"></i>
+    <span><strong>Location:</strong> Lucknow, Uttar Pradesh, India</span>
+  </div>
+
+  <!-- Open to Work -->
+  <div class="meta-item">
+    <i class="fas fa-briefcase"></i>
+    <span><strong>Status:</strong> Open to Work</span>
+  </div>
+
+
+
+
+        <!-- CTA Buttons -->
+        <div class="hero-buttons">
+          <!--
+            ↓ REPLACE resume PDF: place your file at assets/resume.pdf ↓
+          -->
+          <a href="assets/resume.pdf" download="Shreayash_Bora_Resume.pdf" class="btn btn-primary" id="resume-hero-btn">
+            <i class="fas fa-download"></i>
+            Download Resume
+            <span class="btn-tooltip">Place your PDF at: assets/resume.pdf</span>
+          </a>
+          <a href="#contact" class="btn btn-outline">
+            <i class="fas fa-envelope"></i>
+            Contact Me
+          </a>
+        </div>
+      </div>
+
+    </div><!-- /.hero-content -->
+
+    <!-- Scroll Indicator -->
+    <a href="#about" class="scroll-indicator" aria-label="Scroll to About section">
+      <div class="scroll-mouse"><div class="scroll-wheel"></div></div>
+      <span>Scroll Down</span>
+    </a>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       ABOUT SECTION
+       ══════════════════════════════════════════ -->
+  <section id="about" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">Get to know me</p>
+        <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="about-grid">
+
+        <!-- Card 1: Who I Am -->
+        <div class="about-card glass reveal">
+          <div class="about-icon-row">
+            <div class="about-icon-box"><i class="fas fa-code"></i></div>
+            <div class="about-icon-box"><i class="fas fa-lightbulb"></i></div>
+          </div>
+          <h3>Who I Am</h3>
+          <!--
+            ↓ REPLACE this placeholder text with your own introduction ↓
+          -->
+          <p class="about-text">
+    I am a BCA student and an aspiring Full-Stack Developer with a strong interest in web/front end development, python developement, full stack development, artificial intelligence, and problem-solving.
+</p>
+
+<p class="about-text">
+    My passion for coding began with curiosity about how websites and intelligent applications are built, which motivated me to learn programming and develop real-world projects.
+</p>
+
+<p class="about-text">
+    I have worked on projects such as Nursery Plant Shopping Finance Module, SkillSwap, and AI-Driven Dynamic Food Menu Pricing Based on Demand and Weather, where I gained hands-on experience in developing practical and user-focused solutions.
+</p>
+
+<p class="about-text">
+    As a developer, I enjoy creating innovative applications, learning new skills, and continuously improving my knowledge to grow in the field of software development and AI.
+</p>
+        </div>
+
+        <!-- Card 2: My Goals -->
+        <div class="about-card glass reveal reveal-delay-1">
+          <div class="about-icon-row">
+            <div class="about-icon-box"><i class="fas fa-rocket"></i></div>
+          </div>
+          <h3>My Goals</h3>
+          <!--
+            ↓ REPLACE this placeholder text with your goals ↓
+          -->
+          <p class="about-text">
+    My career goal is to become a skilled Full-Stack Developer and Python Developer who can build innovative, scalable, and user-centric applications.
+</p>
+
+<p class="about-text">
+    I am particularly excited about the fields of web/front end development, full-stack development, Python development, artificial intelligence, and data-driven solutions, especially in domains such as education, healthcare, and business automation.
+</p>
+
+<p class="about-text">
+    In the next 1–3 years, I aim to strengthen my expertise in web, full-stack, and Python development while expanding my knowledge of AI technologies and contributing to projects that solve real-world problems.
+</p>
+
+<p class="about-text">
+    I aspire to build impactful products, collaborate with talented teams, and continuously learn emerging technologies to grow as a versatile software professional.
+</p>
+        </div>
+
+        <!-- Card 3: Interests -->
+        <div class="about-card glass reveal reveal-delay-2">
+          <div class="about-icon-row">
+            <div class="about-icon-box"><i class="fas fa-heart"></i></div>
+          </div>
+          <h3>Interests &amp; Hobbies</h3>
+          <!--
+            ↓ REPLACE this placeholder text with your interests ↓
+          -->
+          <p class="about-text">
+    Outside of coding, I enjoy playing video games, exploring new technologies, watching tech-related content, and learning about the latest trends in the IT industry.
+</p>
+
+<p class="about-text">
+    I also like creating content around gaming and spending time improving my problem-solving and analytical skills.
+</p>
+
+<p class="about-text">
+    In technology, I love exploring artificial intelligence, web development, full-stack development, Python programming, and real-world software projects.
+</p>
+
+<p class="about-text">
+    I am always curious to learn new tools, experiment with innovative ideas, and stay updated with emerging technologies that can make a positive impact.
+</p>
+
+<p class="about-text">
+    I believe in continuous self-improvement and enjoy challenging myself with new projects that push my creativity and technical skills, helping me grow both personally and professionally.
+</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       EDUCATION SECTION
+       ══════════════════════════════════════════ -->
+  <section id="education" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">Academic journey</p>
+        <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="timeline">
+
+        <!-- Class 10th -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"><i class="fas fa-school"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-badge">Class 10th</div>
+            <!--
+              ↓ REPLACE all placeholders below with your real 10th details ↓
+            -->
+            <h3 class="timeline-school">Rani Laxmi Bai Memorial Senior And Secondary School</h3>
+            <p class="timeline-board">Board: CBSE</p>
+            <div class="timeline-meta">
+              <span class="timeline-score"><i class="fas fa-percentage"></i> 82.2%</span>
+              <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2021</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Class 12th -->
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"><i class="fas fa-book-open"></i></div>
+          <div class="timeline-card glass">
+            <div class="timeline-badge">Class 12th</div>
+            <!--
+              ↓ REPLACE all placeholders below with your real 12th details ↓
+            -->
+            <h3 class="timeline-school">Rani Laxmi Bai Memorial Senior And Secondary School</h3>
+            <p class="timeline-board">Board: CBSE</p>
+            <div class="timeline-meta">
+              <span class="timeline-score"><i class="fas fa-percentage"></i> 68.4%</span>
+              <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2023</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Graduation -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-card glass current">
+            <div class="timeline-badge active">Currently Pursuing</div>
+            <!--
+              ↓ REPLACE all placeholders below with your college details ↓
+            -->
+            <h3 class="timeline-school">Shri Ramswaroop Memorial College Of Managemeent</h3>
+            <p class="timeline-board">Bachelor of Computer Applications (BCA)</p>
+            <div class="timeline-meta">
+              <span class="timeline-score"><i class="fas fa-star"></i> CGPA: 8.236 / 10</span>
+              <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2023 – 2026</span>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /.timeline -->
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       PROJECTS SECTION
+       ══════════════════════════════════════════ -->
+  <section id="projects" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">What I've built</p>
+        <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <!-- Tab Navigation -->
+      <div class="project-tabs reveal">
+        <button class="tab-btn active" data-tab="major" id="tab-major-btn">
+          <i class="fas fa-layer-group"></i> Major Projects
+        </button>
+        <button class="tab-btn" data-tab="minor" id="tab-minor-btn">
+          <i class="fas fa-code-branch"></i> Minor Projects
+        </button>
+        <button class="tab-btn" data-tab="self" id="tab-self-btn">
+          <i class="fas fa-user-astronaut"></i> Self Projects
+        </button>
+      </div>
+
+      <!-- ── MAJOR PROJECTS ── -->
+      <div class="project-tab-content active" id="tab-major">
+        <div class="projects-grid">
+
+          <!-- Major Project 1 -->
+          <div class="project-card glass reveal" id="major-project-1">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-brain"></i></div>
+              <div class="project-links">
+                <!--
+                  ↓ REPLACE href with your actual GitHub link ↓
+                -->
+                <a href="https://github.com/Shreayash-Bora/ai-driven-dynamic-food-menu-pricing-based-on-demand-and-weather" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <!--
+                  ↓ REPLACE href with your live demo link ↓
+                -->
+                <a href="#" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <!--
+              ↓ REPLACE with your project title ↓
+            -->
+            <h3 class="project-title">AI-Driven Dynamic Food Menu Pricing For Restaurants Based on Demand and Weathe</h3>
+            <!--
+              ↓ REPLACE with your project description ↓
+            -->
+            <p class="project-desc">
+    AI-Driven Dynamic Food Menu Pricing Based on Demand and Weather is an intelligent system that dynamically adjusts food prices by analyzing real-time weather conditions, customer demand, and historical sales data.
+</p>
+
+<p class="project-desc">
+    It helps restaurants optimize pricing, increase revenue, and reduce food waste through data-driven decision-making.
+</p>
+
+<p class="project-desc">
+    The project is interesting because it combines AI, machine learning, and real-time analytics to solve a practical business problem in the food industry.
+</p>
+            <!--
+              ↓ REPLACE tech tags with your actual tech stack ↓
+            -->
+            <div class="project-tech">
+              <span class="tech-tag">HTML</span>
+              <span class="tech-tag">CSS</span>
+              <span class="tech-tag">JavaScript</span>
+              <span class="tech-tag">MongoDB</span>
+              <span class="tech-tag">React</span>
+              <span class="tech-tag">Node</span>
+              <span class="tech-tag">Express.js</span>
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">Python</span>
+<span class="tech-tag">Machine Learning</span>
+<span class="tech-tag">Weather API</span>
+            </div>
+          </div>
+
+         
+          <!--
+            ╔═════════════════════════════════════════════════╗
+            ║  TO ADD MORE MAJOR PROJECTS, copy the block    ║
+            ║  above (from <!- Major Project -> comment)   ║
+            ║  and paste it here. Change the id number.      ║
+            ╚═════════════════════════════════════════════════╝
+          -->
+
+        </div>
+      </div><!-- /#tab-major -->
+
+      <!-- ── MINOR PROJECTS ── -->
+      <div class="project-tab-content" id="tab-minor">
+        <div class="projects-grid">
+
+          <!-- Minor Project 1 -->
+          <div class="project-card glass reveal" id="minor-project-1">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-chart-bar"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Shreayash-Bora/Nursery-Plant-Shopping" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <a href="#" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Nursery Plant Shopping (Finance Module)</h3>
+            <p class="project-desc">
+    Nursery Plant Shopping is a Python-based desktop application developed as an academic project to simplify plant purchasing and financial management for nursery businesses.
+</p>
+
+<p class="project-desc">
+    The project allows users to manage plant inventory, track purchases and sales, maintain transaction records, and perform financial analysis through data visualization and reporting features.
+</p>
+
+<p class="project-desc">
+    It demonstrates concepts of Python programming, GUI development with Tkinter, database management using SQLite, and data analysis using libraries such as Pandas and Matplotlib.
+</p>
+
+<p class="project-desc">
+    This project was developed as a college academic project to apply practical software development and finance management concepts.
+</p>
+            <div class="project-tech">
+             <span class="tech-tag">Python</span>
+<span class="tech-tag">Tkinter</span>
+<span class="tech-tag">SQLite3</span>
+<span class="tech-tag">Pandas</span>
+<span class="tech-tag">NumPy</span>
+<span class="tech-tag">Matplotlib</span>
+<span class="tech-tag">Seaborn</span>
+<span class="tech-tag">Scikit-learn</span>
+            </div>
+          </div>
+
+          <!-- Minor Project 2 -->
+          <div class="project-card glass reveal reveal-delay-1" id="minor-project-2">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-users-cog"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Shreayash-Bora/skillswap_for_users" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <a href="#" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">SkillSwap For User</h3>
+            <p class="project-desc">
+    SkillsSwap for Users was developed to create a platform where users can showcase their skills, discover people with complementary skills, and connect for knowledge sharing and collaboration.
+</p>
+
+<p class="project-desc">
+    The project was built to practice full-stack web development concepts, including React, Node.js, Express.js, MongoDB, authentication using JWT, state management, and REST API integration.
+</p>
+
+<p class="project-desc">
+    It was designed as both a learning experiment and a real-world use case, demonstrating how technology can facilitate skill exchange, networking, and community-driven learning through an interactive and user-friendly web application.
+</p>
+            <div class="project-tech">
+              <span class="tech-tag">React</span>
+<span class="tech-tag">Node.js</span>
+<span class="tech-tag">Express.js</span>
+<span class="tech-tag">MongoDB</span>
+<span class="tech-tag">JWT Authentication</span>
+<span class="tech-tag">REST API</span>
+<span class="tech-tag">JavaScript</span>
+            </div>
+          </div>
+
+          
+        </div>
+      </div><!-- /#tab-minor -->
+
+      <!-- ── SELF PROJECTS ── -->
+      <div class="project-tab-content" id="tab-self">
+        <div class="projects-grid">
+
+          <!-- Self Project 1 -->
+          <div class="project-card glass reveal" id="self-project-1">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-comments"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Shreayash-Bora/Mini-Social-Post-Application" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <a href="#" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Mini Social Post Application</h3>
+            <p class="project-desc">
+    One passion project I built on my own was a Mini Social Post Application inspired by the social features of platforms like TaskPlanet. I wanted to understand how social interactions work in real-world applications, such as posting content, engaging with users, and managing dynamic feeds.
+</p>
+
+<p class="project-desc">
+    The idea came from my curiosity to create a simple platform where users could express themselves by sharing posts (text and images) and interact through likes and comments. I aimed to solve the problem of building a basic but functional social environment that demonstrates core social media features in a simplified way.
+</p>
+
+<p class="project-desc">
+    While developing this project, I focused on implementing user authentication, post creation, and interactive features like likes and comments. I also worked on designing a clean and user-friendly interface to enhance the overall experience.
+</p>
+
+<p class="project-desc">
+    What I enjoyed the most was bringing together both front-end and back-end concepts to create a fully functional application. This project helped me strengthen my full-stack development skills, understand real-world application flow, and improved my confidence in building interactive and scalable web applications.
+</p>
+            <div class="project-tech">
+         <span class="tech-tag">MongoDB</span>
+    <span class="tech-tag">Express.js</span>
+    <span class="tech-tag">React.js</span>
+    <span class="tech-tag">Node.js</span>
+            </div>
+          </div>
+
+          <!-- Self Project 2 -->
+          <div class="project-card glass reveal reveal-delay-1" id="self-project-2">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-building"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Shreayash-Bora/infotech-compliance-services" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <a href="https://infotech-compliance-services-project.netlify.app/" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Infotech Compliance Landing Page</h3>
+           </p>
+            <p class="project-desc">
+    One project I built entirely on my own for learning and experimentation was a fully responsive landing page for an Infotech Compliance service platform designed for research analysts. I was inspired to build this project to improve my front-end development skills and understand how real-world company websites are structured and designed.
+</p>
+
+<p class="project-desc">
+    While working on this project, I focused on creating a pixel-perfect UI and making the design responsive across all screen sizes, including mobile and tablet devices. I also implemented an interactive mobile navigation drawer using JavaScript, which helped me understand user experience and smooth UI transitions better.
+</p>
+
+<p class="project-desc">
+    What I enjoyed the most was transforming a static design idea into a fully functional and visually appealing website. It gave me hands-on experience with layout structuring, reusable CSS components, and responsive design techniques. This project helped me gain confidence in building professional-level front-end interfaces and strengthened my interest in web development.
+</p>
+            <div class="project-tech">
+                   <span class="tech-tag">HTML5</span>
+    <span class="tech-tag">CSS3</span>
+    <span class="tech-tag">Flexbox & Grid</span>
+    <span class="tech-tag">JavaScript</span>
+    <span class="tech-tag">Responsive UI</span>
+            </div>
+          </div>
+
+          <!-- Self Project 3 -->
+          <div class="project-card glass reveal reveal-delay-2" id="self-project-3">
+            <div class="project-card-header">
+              <div class="project-icon"><i class="fas fa-calculator"></i></div>
+              <div class="project-links">
+                <a href="https://github.com/Shreayash-Bora/advanced-gst-calculator" title="View on GitHub" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fab fa-github"></i><span class="proj-link-text">View GitHub</span>
+                </a>
+                <a href="https://advanced-gst-calculator.vercel.app/" title="View Live Demo" class="proj-link" target="_blank" rel="noopener noreferrer">
+                  <i class="fas fa-external-link-alt"></i><span class="proj-link-text">View Live</span>
+                </a>
+              </div>
+            </div>
+            <h3 class="project-title">Advanced GST Calculator</h3>
+            <p class="project-desc">
+    One project I built independently for learning and practical application was an Advanced GST Calculator designed to simplify tax calculations. I was inspired to create this tool to strengthen my JavaScript skills and build something useful for real-world financial scenarios.
+</p>
+
+<p class="project-desc">
+    While developing this project, I implemented features like real-time GST calculation with accurate CGST and SGST breakdown, input validation, and dynamic updates. I also added functionality such as history tracking and PDF download to enhance usability and provide a complete user experience.
+</p>
+
+<p class="project-desc">
+    What I enjoyed the most was designing a modern glassmorphism-based UI and integrating dark/light mode for better accessibility. This project helped me improve my understanding of DOM manipulation, interactive UI development, and building fully responsive applications that work smoothly across all devices.
+</p>
+            <div class="project-tech">
+            <div class="project-tech">
+    <span class="tech-tag">HTML5</span>
+    <span class="tech-tag">CSS3</span>
+    <span class="tech-tag">JavaScript</span>
+    <span class="tech-tag">DOM Manipulation</span>
+    <span class="tech-tag">Responsive Design</span>
+</div>
+            </div>
+          </div>
+
+        </div>
+      </div><!-- /#tab-self -->
+
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RESEARCH PAPERS SECTION
+       ══════════════════════════════════════════ -->
+  <section id="research" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">Academic contributions</p>
+        <h2 class="section-title">Research <span class="gradient-text">Papers</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="research-grid">
+
+        <!-- Research Paper 1 -->
+        <div class="research-card glass reveal" id="paper-1">
+          <div class="research-icon"><i class="fas fa-brain"></i></div>
+          <div class="research-body">
+            <!--
+              ↓ REPLACE with your paper title ↓
+            -->
+            <h3 class="research-title">AI-Driven Dynamic Food Menu Pricing for Restaurants Based on Demand and Weather
+</h3>
+            <!--
+              ↓ REPLACE with a short abstract or description of your paper ↓
+            -->
+            <p class="research-desc">
+              This research paper, titled "AI-Driven Dynamic Food Menu Pricing for Restaurants Based on Demand and Weather", focuses on the application of Artificial Intelligence and Machine Learning in the restaurant industry. The study proposes an intelligent pricing system that dynamically adjusts food menu prices by analyzing historical sales data, customer demand patterns, and real-time weather conditions. The methodology incorporates data preprocessing, LSTM-based demand forecasting, weather impact analysis, and reinforcement learning-based price optimization. Experimental results demonstrated improved demand forecasting accuracy, a 13.8% increase in revenue, and a reduction in unsold inventory compared to traditional static pricing methods. The paper was published in the International Journal of Progressive Research in Engineering Management and Science (IJPREMS), Vol. 06, Issue 01, January 2026.
+
+            </p>
+            <div class="research-meta">
+              <span class="research-domain">
+                <i class="fas fa-tag"></i>
+                <!--
+                  ↓ REPLACE with the domain/keywords of your paper ↓
+                -->
+                Artificial Intelligence • Machine Learning • Dynamic Pricing • Demand Forecasting • Weather Analytics
+              </span>
+              <span class="research-year">
+                <i class="fas fa-calendar-alt"></i>
+                <!--
+                  ↓ REPLACE with the year ↓
+                -->
+                2026
+              </span>
+            </div>
+            <!--
+              ↓ PLACE your paper PDF at: assets/papers/paper1.pdf ↓
+                The download button will open/download it automatically.
+            -->
+            <a
+              href="assets/papers/research_paper.pdf"
+              download="Research_Paper_1_Shreayash_Bora.pdf"
+              class="btn btn-sm btn-outline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <i class="fas fa-download"></i>
+              Download Paper
+              <span class="btn-tooltip">Place PDF at: assets/papers/paper1.pdf</span>
+            </a>
+          </div>
+        </div>
+
+        
+        <!--
+          ╔═════════════════════════════════════════════════╗
+          ║  TO ADD MORE PAPERS, copy a research-card      ║
+          ║  block above and paste it here.                ║
+          ╚═════════════════════════════════════════════════╝
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CERTIFICATES SECTION
+       ══════════════════════════════════════════ -->
+  <section id="certificates" class="section">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">Proof of learning</p>
+        <h2 class="section-title">My <span class="gradient-text">Certificates</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="certs-grid">
+
+        <!-- Certificate 1 -->
+        <div
+          class="cert-card glass reveal"
+          id="cert-card-1"
+          onclick="openCertModal('assets/certificates/ai_with_python.jpg', 'Artificial Intelligence With Python')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 1"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/ai_with_python.jpg','Artificial Intelligence With Python')"
+        >
+          <div class="cert-img-wrapper">
+            <!--
+              ↓ PLACE your certificate image at: assets/certificates/cert1.jpg ↓
+            -->
+            <img
+              src="assets/certificates/ai_with_python.jpg"
+              alt="Certificate 1"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/ai_with_python</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Artificial Intelligence With Python</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> NATIONAL INSTITUTE OF ELECTRONICS AND INFORMATION TECHNOLOGY (NIELIT)</p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 2 -->
+        <div
+          class="cert-card glass reveal reveal-delay-1"
+          id="cert-card-2"
+          onclick="openCertModal('assets/certificates/Mern_Stack.jpg', 'Mern Stack')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 2"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Mern_Stack.jpg','Mern Stack')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Mern_Stack.jpg"
+              alt="Certificate 2"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Mern_Stack.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Mern Stack</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Analyze Infotech</p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+         <!-- Certificate 3 -->
+        <div
+          class="cert-card glass reveal reveal-delay-2"
+          id="cert-card-3"
+          onclick="openCertModal('assets/certificates/ai_food.jpg', 'AI-Driven Dynamic Food Menu Pricing For Restaurants Based On Demand And Weather')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 3"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/ai_food.jpg','AI-Driven Dynamic Food Menu Pricing For Restaurants Based On Demand And Weather')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/ai_food.jpg"
+              alt="Certificate 3"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/ai_food.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">AI-Driven Dynamic Food Menu Pricing For Restaurants Based On Demand And Weatherk</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> IJPREMS (International Journal of Progressive Research in Engineering Management and Science) </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 4 -->
+        <div
+          class="cert-card glass reveal reveal-delay-3"
+          id="cert-card-4"
+          onclick="openCertModal('assets/certificates/Introduction_To_Mern_Stack.jpg', 'Introduction to Mern Stack')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 4"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Mern_Stack.jpg','Introduction to Mern Stack')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Mern_Stack.jpg"
+              alt="Certificate 4"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Introduction_To_Mern_Stack.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction to Mern Stack</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 5 -->
+        <div
+          class="cert-card glass reveal reveal-delay-4"
+          id="cert-card-5"
+          onclick="openCertModal('assets/certificates/ReactjS_Project_For_Beginners.jpg', 'ReactjS Project For Beginners')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 5"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/ReactjS_Project_For_Beginners.jpg','ReactjS Project For Beginners')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/ReactjS_Project_For_Beginners.jpg"
+              alt="Certificate 5"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/ReactjS_Project_For_Beginners.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">ReactjS Project For Beginners</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+        
+        <!-- Certificate 6 -->
+        <div
+          class="cert-card glass reveal reveal-delay-5"
+          id="cert-card-6"
+          onclick="openCertModal('assets/certificates/Introduction_To_Generative_AI_Studio.jpg', 'Introduction to Generative AI Studio')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 6"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Generative_AI_Studio.jpg','Introduction to Generative AI Studio')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Generative_AI_Studio.jpg"
+              alt="Certificate 6"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Introduction_To_Generative_AI_Studio.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction to Generative AI Studio</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+        
+        <!-- Certificate 7 -->
+        <div
+          class="cert-card glass reveal reveal-delay-6"
+          id="cert-card-7"
+          onclick="openCertModal('assets/certificates/Introduction_To_Applied_Data_Science_With_Python.jpg', 'Introduction To Applied Data Science With Python')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 7"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Applied_Data_Science_With_Python.jpg','Introduction To Applied Data Science With Python')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Applied_Data_Science_With_Python.jpg"
+              alt="Certificate 7"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Introduction_To_Applied_Data_Science_With_Python.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction To Applied Data Science With Python</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+        
+        <!-- Certificate 8 -->
+        <div
+          class="cert-card glass reveal reveal-delay-7"
+          id="cert-card-8"
+          onclick="openCertModal('assets/certificates/Introduction_To_Image_Generation.jpg', 'Introduction To Image Generation')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 8"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Image_Generation.jpg','Introduction To Image Generation')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Image_Generation.jpg"
+              alt="Certificate 8"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Introduction_To-Image_Generation.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction To Image Generation</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+        
+        <!-- Certificate 9 -->
+        <div
+          class="cert-card glass reveal reveal-delay-8"
+          id="cert-card-9"
+          onclick="openCertModal('assets/certificates/Introduction_To_Prompt_Engineering_With_Github_Copilot.jpg', 'Introduction To Prompt Engineering With Github Copilot')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 9"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Prompt_Engineering_With_Github_Copilot.jpg','Introduction To Prompt Engineering With Github Copilot')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Prompt_Engineering_With_Github_Copilot.jpg"
+              alt="Certificate 9"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/cert4.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction To Prompt Engineering With Github Copilot</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+        
+        <!-- Certificate 10 -->
+        <div
+          class="cert-card glass reveal reveal-delay-9"
+          id="cert-card-10"
+          onclick="openCertModal('assets/certificates/Introduction_To_Large_Language_Models.jpg', 'Introduction To Large Language Models')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 10"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Introduction_To_Large_Language_Models.jpg','Introduction To Large Language Models')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Introduction_To_Large_Language_Models.jpg"
+              alt="Certificate 10"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Introduction_To_Large_Language_Models.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Introduction To Large Language Models</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!--
+          ╔═════════════════════════════════════════════════╗
+          ║  TO ADD MORE CERTIFICATES, copy a cert-card    ║
+          ║  block above and paste it here.                ║
+          ╚═════════════════════════════════════════════════╝
+        -->
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certificate Modal (JavaScript-powered) -->
+  <div id="cert-modal" class="modal-overlay" onclick="closeCertModal(event)" role="dialog" aria-modal="true" aria-labelledby="modal-cert-title">
+    <div class="modal-box">
+      <button class="modal-close" onclick="closeCertModal(null, true)" aria-label="Close certificate modal">
+        <i class="fas fa-times"></i>
+      </button>
+      <h3 id="modal-cert-title" class="modal-title">Certificate</h3>
+      <img id="modal-cert-img" src="" alt="Certificate" class="modal-cert-img" />
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════════════════
+       SKILLS SECTION
+       ══════════════════════════════════════════ -->
+  <section id="skills" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">My toolkit</p>
+        <h2 class="section-title">Skills &amp; <span class="gradient-text">Technologies</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="skills-categories">
+
+        <!-- Programming Languages -->
+<div class="skill-group reveal" id="skills-programming">
+  <h3 class="skill-group-title">
+    <i class="fas fa-code"></i> Programming Languages
+  </h3>
+  <div class="skills-grid">
+    <div class="skill-chip"><i class="fab fa-python"></i><span>Python</span></div>
+    <div class="skill-chip"><i class="fas fa-code"></i><span>C</span></div>
+    <div class="skill-chip"><i class="fab fa-java"></i><span>Java (Basics)</span></div>
+  </div>
+</div>
+
+<!-- Web Technologies -->
+<div class="skill-group reveal reveal-delay-1" id="skills-web">
+  <h3 class="skill-group-title">
+    <i class="fas fa-globe"></i> Web Technologies
+  </h3>
+  <div class="skills-grid">
+    <div class="skill-chip"><i class="fab fa-html5"></i><span>HTML5</span></div>
+    <div class="skill-chip"><i class="fab fa-css3-alt"></i><span>CSS3</span></div>
+    <div class="skill-chip"><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+    <div class="skill-chip"><i class="fab fa-react"></i><span>React</span></div>
+    <div class="skill-chip"><i class="fab fa-node-js"></i><span>Node.js (Basics)</span></div>
+  </div>
+</div>
+
+<!-- Database Management -->
+<div class="skill-group reveal reveal-delay-2" id="skills-database">
+  <h3 class="skill-group-title">
+    <i class="fas fa-database"></i> Database Management
+  </h3>
+  <div class="skills-grid">
+    <div class="skill-chip"><i class="fas fa-database"></i><span>MySQL</span></div>
+    <div class="skill-chip"><i class="fas fa-leaf"></i><span>MongoDB</span></div>
+    <div class="skill-chip"><i class="fas fa-server"></i><span>Microsoft SQL Server</span></div>
+  </div>
+</div>
+
+<!-- Tools & Platforms -->
+<div class="skill-group reveal reveal-delay-3" id="skills-tools">
+  <h3 class="skill-group-title">
+    <i class="fas fa-tools"></i> Tools & Platforms
+  </h3>
+  <div class="skills-grid">
+    <div class="skill-chip"><i class="fas fa-code"></i><span>VS Code</span></div>
+  </div>
+</div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       RESUME SECTION
+       ══════════════════════════════════════════ -->
+  <section id="resume" class="section resume-section">
+    <div class="container">
+      <div class="resume-inner glass reveal">
+        <div class="resume-glow"></div>
+        <div class="resume-content">
+          <div class="resume-icon-big"><i class="fas fa-file-pdf"></i></div>
+          <h2>Download My <span class="gradient-text">Resume</span></h2>
+          <p>Get a complete overview of my education, skills, projects, and experience in one document.</p>
+          <!--
+            ↓ PLACE your resume PDF at: assets/resume.pdf ↓
+          -->
+          <a
+            href="assets/resume.pdf"
+            download="Shreayash_Bora_Resume.pdf"
+            class="btn btn-primary btn-lg"
+            id="resume-section-btn"
+          >
+            <i class="fas fa-download"></i>
+            Download Resume
+            <span class="btn-tooltip">Place your PDF at: assets/resume.pdf</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       CONTACT SECTION
+       ══════════════════════════════════════════ -->
+  <section id="contact" class="section section-alt">
+    <div class="container">
+
+      <div class="section-header reveal">
+        <p class="section-label">Get in touch</p>
+        <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+        <div class="section-line"></div>
+      </div>
+
+      <div class="contact-centered">
+
+        <!-- Contact Info (centered) -->
+        <div class="contact-info reveal">
+          <h3>Reach Out to Me</h3>
+          <p class="contact-intro">
+            I'm always open to new opportunities, exciting collaborations, or just a friendly conversation.
+            Whether it's an internship, a project idea, or a question — feel free to reach out!
+          </p>
+
+          <div class="contact-details">
+
+            <!--
+              ↓ REPLACE href and email text with your actual email ↓
+            -->
+            <a href="mailto:kksbora9@example.com" class="contact-item" id="contact-email-link">
+              <div class="contact-item-icon"><i class="fas fa-envelope"></i></div>
+              <div>
+                <span class="contact-label">Email</span>
+                <span class="contact-value">kksbora9@example.com</span>
+              </div>
+            </a>
+
+            <!--
+              ↓ REPLACE href and phone number with your actual phone ↓
+            -->
+            <a href="tel:+917380446757" class="contact-item" id="contact-phone-link">
+              <div class="contact-item-icon"><i class="fas fa-phone-alt"></i></div>
+              <div>
+                <span class="contact-label">Phone</span>
+                <span class="contact-value">+91 7380446757</span>
+              </div>
+            </a>
+
+            <!-- Location (no link needed) -->
+            <div class="contact-item" id="contact-location">
+              <div class="contact-item-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div>
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Lucknow, Uttar Pradesh, India</span>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- Social Links -->
+          <div class="social-links">
+            <!--
+              ↓ REPLACE href with your actual social profile URLs ↓
+            -->
+            <a
+              href="https://www.linkedin.com/in/shreayash-bora-ab86b9293"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn"
+              id="social-linkedin"
+              title="LinkedIn – Paste your LinkedIn URL here"
+            >
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a
+              href="https://github.com/Shreayash-Bora"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn"
+              id="social-github"
+              title="GitHub – Paste your GitHub profile URL here"
+            >
+              <i class="fab fa-github"></i>
+            </a>
+            <a
+              href="https://www.instagram.com/shreayash123322?igsh=MWtvYnlmazR5Z3QyMA=="
+              target="_blank"
+              rel="noopener noreferrer"
+              class="social-btn"
+              id="social-instagram"
+              title="Instagram – Paste your Instagram profile URL here"
+            >
+              <i class="fab fa-instagram"></i>
+            </a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-inner">
+        <a href="#hero" class="footer-logo">SB<span class="dot">.</span></a>
+        <p class="footer-text">
+          Designed &amp; built with <i class="fas fa-heart heart-icon" aria-hidden="true"></i> by
+          <span class="gradient-text">Shreayash Bora</span>
+        </p>
+        <div class="footer-social">
+          <a href="https://www.linkedin.com/in/shreayash-bora-ab86b9293" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+          <a href="https://github.com/Shreayash-Bora" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="fab fa-github"></i></a>
+          <a href="https://www.instagram.com/shreayash123322?igsh=MWtvYnlmazR5Z3QyMA==" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        </div>
+      </div>
+      <p class="footer-copy">&copy; <span id="footer-year">2025</span> Shreayash Bora. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <button id="back-to-top" class="back-to-top" aria-label="Scroll back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- Portfolio JavaScript -->
+  <script src="script.js"></script>
+
+  <!-- Auto-update footer year -->
+  <script>
+    document.getElementById('footer-year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
