@@ -59,26 +59,28 @@
 
       <!-- Profile Image -->
       <div class="hero-image-wrapper reveal">
-        <div class="hero-avatar">
-          <!--
-            ┌─────────────────────────────────────────────────┐
-            │  HOW TO ADD YOUR PROFILE PHOTO:                 │
-            │  1. Create a folder named "assets" here.        │
-            │  2. Place your photo inside and name it         │
-            │     "profile.jpg"                               │
-            │  3. The image will appear automatically.        │
-            └─────────────────────────────────────────────────┘
-          -->
-          <img
-            id="profile-img"
-            src="assets/profile.jpg"
-            alt="Shreayash Bora – Profile Photo"
-            onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';"
-          />
-          <div id="avatar-placeholder" class="avatar-placeholder">
-            <i class="fas fa-user-circle"></i>
-            <span>Upload your profile photo here</span>
-            <small>Place image as: assets/profile.jpg</small>
+        <div class="profile-wrapper">
+          <div class="hero-avatar">
+            <!--
+              ┌─────────────────────────────────────────────────┐
+              │  HOW TO ADD YOUR PROFILE PHOTO:                 │
+              │  1. Create a folder named "assets" here.        │
+              │  2. Place your photo inside and name it         │
+              │     "profile.jpg"                               │
+              │  3. The image will appear automatically.        │
+              └─────────────────────────────────────────────────┘
+            -->
+            <img
+              id="profile-img"
+              src="assets/profile.jpg"
+              alt="Shreayash Bora – Profile Photo"
+              onerror="this.style.display='none'; document.getElementById('avatar-placeholder').style.display='flex';"
+            />
+            <div id="avatar-placeholder" class="avatar-placeholder">
+              <i class="fas fa-user-circle"></i>
+              <span>Upload your profile photo here</span>
+              <small>Place image as: assets/profile.jpg</small>
+            </div>
           </div>
         </div>
         <!-- Status Badge -->
@@ -149,6 +151,26 @@
             <i class="fas fa-envelope"></i>
             Contact Me
           </a>
+        </div>
+
+        <!-- ── Stats Section ── -->
+        <div class="stats">
+          <div class="stat-box">
+            <span class="counter" data-target="6">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-box">
+            <span class="counter" data-target="1">0</span>
+            <span class="stat-label">Research Papers</span>
+          </div>
+          <div class="stat-box">
+            <span class="counter" data-target="12">0</span>
+            <span class="stat-label">Technologies</span>
+          </div>
+          <div class="stat-box">
+            <span class="counter" data-target="10">0</span>
+            <span class="stat-label">Certificates</span>
+          </div>
         </div>
       </div>
 
@@ -314,7 +336,7 @@
         <div class="timeline-item reveal reveal-delay-2">
           <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
           <div class="timeline-card glass current">
-            <div class="timeline-badge active">Currently Pursuing</div>
+            <div class="timeline-badge">Undergraduated</div>
             <!--
               ↓ REPLACE all placeholders below with your college details ↓
             -->
@@ -323,6 +345,23 @@
             <div class="timeline-meta">
               <span class="timeline-score"><i class="fas fa-star"></i> CGPA: 8.236 / 10</span>
               <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2023 – 2026</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Masters -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"><i class="fas fa-graduation-cap"></i></div>
+          <div class="timeline-card glass current">
+            <div class="timeline-badge">Persuing</div>
+            <!--
+              ↓ REPLACE all placeholders below with your college details ↓
+            -->
+            <h3 class="timeline-school">GL Bajaj Institute Of Technology And Management</h3>
+            <p class="timeline-board">Masters of Computer Applications (MCA)</p>
+            <div class="timeline-meta">
+              <span class="timeline-score"><i class="fas fa-star"></i> CGPA: / 10</span>
+              <span class="timeline-year"><i class="fas fa-calendar-alt"></i> 2026 – 2028</span>
             </div>
           </div>
         </div>
@@ -1052,6 +1091,73 @@
             </button>
           </div>
         </div>
+           
+         <!-- Certificate 11 -->
+        <div
+          class="cert-card glass reveal reveal-delay-10"
+          id="cert-card-11"
+          onclick="openCertModal('assets/certificates/Create_Engaging_Video_with_Google_Vids.jpg', 'Create Engaging Video with Google Vids')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 11"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Create_Engaging_Video_with_Google_Vids.jpg','Create Engaging Video with Google Vids')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Create_Engaging_Video_with_Google_Vids.jpg"
+              alt="Certificate 11"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Create_Engaging_Video_with_Google_Vids.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Create Engaging Video with Google Vids</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
+        <!-- Certificate 12 -->
+        <div
+          class="cert-card glass reveal reveal-delay-11"
+          id="cert-card-12"
+          onclick="openCertModal('assets/certificates/Technolofgy_Job_Simulation.jpg', 'Technolofgy Job Simulation')"
+          role="button"
+          tabindex="0"
+          aria-label="View Certificate 12"
+          onkeydown="if(event.key==='Enter')openCertModal('assets/certificates/Technolofgy_Job_Simulation.jpg','Technolofgy Job Simulation')"
+        >
+          <div class="cert-img-wrapper">
+            <img
+              src="assets/certificates/Technolofgy_Job_Simulation.jpg"
+              alt="Certificate 12"
+              class="cert-img"
+              onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+            />
+            <div class="cert-img-placeholder" style="display:none;">
+              <i class="fas fa-image"></i>
+              <span>Upload certificate image here</span>
+              <small>Place at: assets/certificates/Technolofgy_Job_Simulation.jpg</small>
+            </div>
+            <div class="cert-overlay"><i class="fas fa-expand-alt"></i></div>
+          </div>
+          <div class="cert-body">
+            <h3 class="cert-title">Technolofgy Job Simulation</h3>
+            <p class="cert-platform"><i class="fas fa-building"></i> Simplilearn </p>
+            <button class="btn btn-sm btn-primary view-cert-btn" tabindex="-1">
+              <i class="fas fa-eye"></i> View Certificate
+            </button>
+          </div>
+        </div>
+
 
         <!--
           ╔═════════════════════════════════════════════════╗

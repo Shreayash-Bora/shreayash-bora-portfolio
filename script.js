@@ -165,22 +165,62 @@ function handleBackToTop() {
    5.  SCROLL REVEAL ANIMATIONS
    ══════════════════════════════════════════════ */
 (function initScrollReveal() {
-  const items = $$('.reveal');
+  /* ── Primary reveal observer: fires on .reveal elements ── */
+  const items = $$('.reveal, .reveal-left, .reveal-right');
   if (!items.length) return;
 
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('revealed');
-        observer.unobserve(entry.target); // fire once
+        observer.unobserve(entry.target);
+
+        /* Stagger direct children that carry a data-stagger attribute */
+        const children = [...entry.target.querySelectorAll('[data-stagger]')];
+        children.forEach((child, i) => {
+          child.style.transitionDelay = `${(i * 0.07) + 0.05}s`;
+          child.classList.add('revealed');
+        });
       }
     });
   }, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -60px 0px',
+    threshold: 0.10,
+    rootMargin: '0px 0px -48px 0px',
   });
 
   items.forEach(item => observer.observe(item));
+
+  /* ── Auto-stagger: cards/chips inside a grid parent reveal with delay ── */
+  const gridParents = $$('.projects-grid, .certs-grid, .about-grid, .skills-categories, .research-grid, .stats');
+  const cardObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const cards = [...entry.target.children];
+        cards.forEach((card, i) => {
+          /* only animate cards not already animated */
+          if (!card.classList.contains('_animDone')) {
+            card.style.opacity       = '0';
+            card.style.transform     = 'translateY(24px) scale(0.97)';
+            card.style.filter        = 'blur(3px)';
+            card.style.transition    = `opacity 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s,
+                                        transform 0.6s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s,
+                                        filter 0.5s cubic-bezier(0.16,1,0.3,1) ${i*0.08}s`;
+            requestAnimationFrame(() => {
+              requestAnimationFrame(() => {
+                card.style.opacity   = '1';
+                card.style.transform = 'translateY(0) scale(1)';
+                card.style.filter    = 'blur(0px)';
+                card.classList.add('_animDone');
+              });
+            });
+          }
+        });
+        cardObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+
+  gridParents.forEach(g => cardObserver.observe(g));
 })();
 
 /* ══════════════════════════════════════════════
@@ -532,9 +572,9 @@ function shakeForm(form) {
    15. INIT on DOM Ready
    ══════════════════════════════════════════════ */
 document.addEventListener('DOMContentLoaded', () => {
-  // Reveal hero elements immediately
+  // Reveal hero elements immediately with cinematic stagger
   $$('#hero .reveal').forEach((el, i) => {
-    setTimeout(() => el.classList.add('revealed'), i * 150 + 200);
+    setTimeout(() => el.classList.add('revealed'), i * 180 + 150);
   });
 
   console.log(
@@ -546,3 +586,143 @@ document.addEventListener('DOMContentLoaded', () => {
     'color:#f59e0b;font-size:11px;'
   );
 });
+
+/* ─────────────────────────────────────────────
+   COUNTER ANIMATION – counts from 0 to data-target
+   ───────────────────────────────────────────── */
+(function () {
+  function animateCounter(el) {
+    var target   = parseInt(el.getAttribute('data-target'), 10);
+    var duration = 1200;
+    var start    = performance.now();
+
+    function step(now) {
+      var elapsed  = now - start;
+      var progress = Math.min(elapsed / duration, 1);
+      var eased    = 1 - (1 - progress) * (1 - progress); // ease-out quad
+      el.textContent = Math.floor(eased * target);
+      if (progress < 1) requestAnimationFrame(step);
+      else el.textContent = target;
+    }
+
+    requestAnimationFrame(step);
+  }
+
+  var counters = document.querySelectorAll('.counter');
+  if (!counters.length) return;
+
+  var observer = new IntersectionObserver(
+    function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.5 }
+  );
+
+  counters.forEach(function (counter) {
+    observer.observe(counter);
+  });
+})();
+
+/* ══════════════════════════════════════════════
+   16.  3D CARD TILT — project & certificate cards
+   ══════════════════════════════════════════════ */
+(function initCardTilt() {
+  const MAX_TILT = 7; // degrees — subtle, not gimmicky
+
+  function applyTilt(card, e) {
+    const rect = card.getBoundingClientRect();
+    const cx   = rect.left + rect.width  / 2;
+    const cy   = rect.top  + rect.height / 2;
+    const dx   = (e.clientX - cx) / (rect.width  / 2); // -1 → +1
+    const dy   = (e.clientY - cy) / (rect.height / 2); // -1 → +1
+    const rx   = (-dy * MAX_TILT).toFixed(2);
+    const ry   = ( dx * MAX_TILT).toFixed(2);
+    const persp = card.classList.contains('cert-card') ? 800 : 900;
+    card.style.transform =
+      `perspective(${persp}px) rotateX(${rx}deg) rotateY(${ry}deg) translateY(-8px) scale(1.012)`;
+  }
+
+  function resetTilt(card) {
+    /* Clear inline transform — CSS transition handles the smooth reset */
+    card.style.transform = '';
+  }
+
+  /* Skip touch screens to avoid accidental tilt during scrolling */
+  if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    $$('.project-card, .cert-card').forEach(card => {
+      card.addEventListener('mousemove',  e  => applyTilt(card, e), { passive: true });
+      card.addEventListener('mouseleave', () => resetTilt(card));
+    });
+  }
+})();
+
+/* ══════════════════════════════════════════════
+   17.  HERO PARALLAX on scroll
+   ══════════════════════════════════════════════ */
+(function initHeroParallax() {
+  const wrapper = $('.hero-image-wrapper');
+  const hero    = $('#hero');
+  if (!wrapper || !hero) return;
+
+  /* Desktop-only — avoids battery drain & jank on touch devices */
+  if (!window.matchMedia('(hover: hover) and (pointer: fine)').matches) return;
+
+  let ticking = false;
+
+  window.addEventListener('scroll', () => {
+    if (!ticking) {
+      requestAnimationFrame(() => {
+        const heroH   = hero.offsetHeight;
+        const scrollY = window.scrollY;
+        /* Shift image upward up to 38px as hero scrolls out of view */
+        const progress = Math.min(scrollY / heroH, 1);
+        const shift    = -(progress * 38).toFixed(2);
+        wrapper.style.setProperty('--parallax-y', `${shift}px`);
+        ticking = false;
+      });
+      ticking = true;
+    }
+  }, { passive: true });
+})();
+
+/* ══════════════════════════════════════════════
+   18.  SECTION DIVIDER — premium glow-wave reveal
+   Adds .divider-visible when section bottom is near viewport bottom
+   ══════════════════════════════════════════════ */
+(function initSectionDividers() {
+  const sections = $$('section.section');
+  if (!sections.length) return;
+
+  /* Skip contact and resume — immersive sections with own treatment */
+  const skip = new Set(['contact', 'resume']);
+
+  /* Use scroll-based check for more precise "bottom of section" detection */
+  function checkDividers() {
+    const viewH = window.innerHeight;
+    sections.forEach(section => {
+      if (skip.has(section.id)) return;
+      const rect = section.getBoundingClientRect();
+      const sectionH = section.offsetHeight;
+
+      /* Show divider when ≥70% of section has scrolled past viewport top
+         AND the section bottom is within 120px of the viewport bottom */
+      const scrolledPct = Math.max(0, -rect.top) / sectionH;
+      const bottomNear  = rect.bottom <= viewH + 120 && rect.bottom >= -60;
+
+      if ((scrolledPct >= 0.65 || bottomNear) && rect.top < viewH * 0.85) {
+        section.classList.add('divider-visible');
+      } else if (rect.top > viewH || rect.bottom < 0) {
+        section.classList.remove('divider-visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', checkDividers, { passive: true });
+  /* Run once after short delay to catch already-visible sections */
+  setTimeout(checkDividers, 300);
+})();
